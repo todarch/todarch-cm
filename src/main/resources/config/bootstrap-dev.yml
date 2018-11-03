@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:7001
+  mail:
+    properties:
+      mail:
+        smtp:
+          debug: true
+
+server:
+  port: 7006
+
+RABBITMQ_HOST: localhost
+RABBITMQ_PORT: 5672
+RABBITMQ_USERNAME: guest
+RABBITMQ_PASSWORD: guest

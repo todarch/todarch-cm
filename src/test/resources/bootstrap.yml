@@ -1,6 +1,12 @@
-spring.cloud:
-  config.enabled: false
-  stream:
-    bindings:
-      input:
-        destination: emails
+spring:
+  cloud:
+    config.enabled: false
+    stream:
+      bindings:
+        input:
+          destination: emails
+  mail:
+    host: localhost
+    port: 25
+    username: me@localhost
+    password:

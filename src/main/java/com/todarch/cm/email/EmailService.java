@@ -25,11 +25,13 @@ public class EmailService {
    * Sends simple email.
    */
   public void sendSimpleMessage(SendEmailRequest req) {
+    log.info("Attempting to send email to {}", req.getTo());
     SimpleMailMessage message = new SimpleMailMessage();
     message.setFrom(mailProperties.getUsername());
     message.setTo(req.getTo());
     message.setSubject("Welcome to Todarch!");
     message.setText(req.getParameters().get("activation_url"));
     mailSender.send(message);
+    log.info("Sent email");
   }
 }
